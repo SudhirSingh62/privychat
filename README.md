@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🔐 PrivyChat : Private Real-Time Chat Platform  
+💼 Secure ephemeral chat rooms powered by Redis and Next.js
 
-## Getting Started
+PrivyChat is a production-grade real-time private chat application featuring invite-only rooms, Redis-powered pub/sub messaging, and automatic room self-destruction using TTL-based lifecycle management.
 
-First, run the development server:
+Built with Next.js 16, TypeScript, Upstash Redis, and Tailwind CSS, the system demonstrates scalable event-driven architecture and privacy-focused full-stack engineering.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+> Private rooms. Instant messaging. Automatic expiry.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Live Demo
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🔗 https://privychat.sudhirsingh.dev
 
-## Learn More
+> Note: Chat rooms automatically self-destruct after 10 minutes for privacy.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ✨ Key Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 🔐 Private Room System
+- Invite-only secure chat rooms  
+- Strict room membership validation  
+- One-click secure room creation  
+- Manual room destruction support  
 
-## Deploy on Vercel
+### ⚡ Real-Time Messaging
+- Redis pub/sub powered live chat  
+- Low-latency message delivery  
+- Event-driven architecture  
+- Automatic message synchronization  
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### ⏳ Ephemeral Privacy
+- Automatic room expiry using Redis TTL  
+- Live self-destruct countdown timer  
+- Permanent message deletion on expiry  
+- Real-time room destruction broadcast  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 🛡 Privacy Safeguards
+- Tab-switch blur protection  
+- Window focus detection  
+- Interaction deterrents  
+- Secure client-server validation  
+
+### 🎨 Modern UX
+- Fully responsive interface  
+- Terminal-inspired chat UI  
+- Optimistic message sending  
+- Clean minimal Tailwind design  
+
+---
+
+## 🏗 Tech Stack
+
+**Frontend**
+- Next.js 16 (App Router)  
+- TypeScript  
+- Tailwind CSS  
+- TanStack Query  
+
+**Realtime & Backend**
+- Upstash Redis (pub/sub + TTL)  
+- Event-driven messaging  
+- Next.js API routes  
+
+**Utilities**
+- date-fns  
+- Custom realtime client  
+- Modern React hooks  
+
+---
+
+## 🧠 Architecture Overview
+
+PrivyChat follows an event-driven real-time architecture:
+
+User sends message  
+→ API validates room membership  
+→ Message stored  
+→ Redis publish to room channel  
+→ Subscribers receive instantly  
+→ UI updates via realtime client  
+
+Room lifecycle is managed using Redis TTL to enable automatic expiry and scalable cleanup.
+
+---
+
+
