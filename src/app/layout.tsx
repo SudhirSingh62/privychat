@@ -9,7 +9,7 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: ">privychat",
+  title: "PrivyChat",
   description: "A private, self-destructing chat room.",
   icons: {
     icon: "/icon.svg",
